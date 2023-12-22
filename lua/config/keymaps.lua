@@ -16,6 +16,8 @@ keymap.set("n", "x", '"_x')
 keymap.set("i", "jk", "<ESC>", opts)
 keymap.set("n", "ee", "<S-w>$", opts) -- move cursor to end of lines
 keymap.set("n", "ff", "0", opts) -- move cursor to begin of line
+keymap.set("v", "ff", "0", opts) -- move cursor to begin of line
+keymap.set("v", "ee", "<S-w>$", opts) -- move cursor to begin of line
 
 -- window management
 keymap.set("n", "sv", "<C-w>v") -- split window vertically
@@ -24,9 +26,9 @@ keymap.set("n", "se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "sc", ":close<CR>") -- close current split window
 
 -- tab management
--- keymap.set("n", "to", ":tabnew<CR>", opts) -- open new tab
--- keymap.set("n", "tc", ":tabclose<CR>", opts) -- close current tab
--- keymap.set("n", "tn", ":tabn<CR>", opts) -- go to next tab
+-- keymap.set("n", "to", ":tabnew<cr>", opts) -- open new tab
+-- keymap.set("n", "tc", ":tabclose<cr>", opts) -- close current tab
+-- keymap.set("n", "tn", ":tabn<cr>", opts) -- go to next tab
 -- keymap.set("n", "tp", ":tabp<CR>", opts) -- go to previous tab
 
 -- Navigate buffers
