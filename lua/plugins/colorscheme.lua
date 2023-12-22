@@ -2,8 +2,7 @@ return {
   {
     "craftzdog/solarized-osaka.nvim",
     branch = "osaka",
-    name = "osaka",
-    lazy = true,
+    lazy = false,
     priority = 1000,
     opts = function()
       return {
