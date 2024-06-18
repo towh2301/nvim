@@ -1,0 +1,5 @@
+# Makefile for packer.nvim
+./plugin/packer_compiled.lua
+
+
+
