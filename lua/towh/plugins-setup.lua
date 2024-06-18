@@ -176,11 +176,42 @@ return require("packer").startup(function(use)
 
   -- startup nvim custom
   use({
-    "startup-nvim/startup.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
     config = function()
-      require("startup").setup()
+      require("dashboard").setup({
+        theme = "hyper",
+        config = {
+          week_header = {
+            enable = true,
+          },
+          shortcut = {
+            { desc = "󰊳 Update", group = "@property", action = "PackerSync", key = "u" },
+            {
+              icon = " ",
+              icon_hl = "@variable",
+              desc = "Files",
+              group = "Label",
+              action = "Telescope find_files",
+              key = "f",
+            },
+            -- {
+            --   desc = " Apps",
+            --   group = "DiagnosticHint",
+            --   action = "Telescope app",
+            --   key = "a",
+            -- },
+            -- {
+            --   desc = " dotfiles",
+            --   group = "Number",
+            --   action = "Telescope dotfiles",
+            --   key = "d",
+            -- },
+          },
+        },
+      })
     end,
+    requires = { "nvim-tree/nvim-web-devicons" },
   })
 
   -- github copilot
