@@ -42,7 +42,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
   -- typescript specific keymaps (e.g. rename file and update imports)
-  if client.name == "tsserver" then
+  if client.name == "ts_ls" then
     keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") -- rename file and update imports
     keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports
     keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables
@@ -113,11 +113,11 @@ lspconfig["lua_ls"].setup({
     },
   },
 })
-lspconfig["clangd"].setup({
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    -- disable clangd formatting if you plan on formatting via null-ls
-    client.resolved_capabilities.document_formatting = false
-    on_attach(client, bufnr)
-  end,
-})
+-- lspconfig["clangd"].setup({
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     -- disable clangd formatting if you plan on formatting via null-ls
+--     client.resolved_capabilities.document_formatting = false
+--     on_attach(client, bufnr)
+--   end,
+-- })
