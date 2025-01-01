@@ -53,6 +53,12 @@ return require("packer").startup(function(use)
   use("EdenEast/nightfox.nvim") -- nightfox colorscheme
   use("navarasu/onedark.nvim") -- onedark colorscheme
   use({ "projekt0n/github-nvim-theme" })
+  use({
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  })
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigator
 

@@ -10,6 +10,10 @@ opt.shiftwidth = 2 -- 2 space for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.smarttab = true -- enhance tab
+opt.smartindent = true -- smart indent
+opt.softtabstop = 2 -- 2 space for tab
+opt.shiftround = true -- round indent to multiple of shiftwidth
+opt.joinspaces = false -- don't insert two spaces after punctuation on join
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
@@ -67,6 +71,9 @@ opt.pumheight = 10 -- pop up menu height
 vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
 
 opt.shortmess:append("c")
+
+-- for theme
+vim.g.nightflyTransparent = true
 
 -- under curl options
 vim.cmd("set whichwrap+=<,>,[,],h,l")

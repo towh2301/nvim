@@ -2,6 +2,13 @@
 -- in case it isn't installed
 local cmd = vim.cmd
 
+-- solarized osaka
+local solarized_status, solarized = pcall(require, "solarized-osaka")
+if not solarized_status then
+  print("solarized-osaka is not installed!")
+  return
+end
+
 -- Default options for nightfox
 local nightfox, fox = pcall(require, "nightfox")
 if not nightfox then
@@ -125,4 +132,4 @@ cat.setup({
 vim.g.nightflyTransparent = true
 
 -- setup must be called before loading
-cmd("colorscheme nightfox")
+cmd("colorscheme nightfly")

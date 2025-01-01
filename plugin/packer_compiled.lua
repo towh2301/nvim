@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/github/copilot.vim"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\2\0\0\6\0\v\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\3=\3\n\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\6\tdesc\nFiles\ngroup\nLabel\bkey\6f\vaction\25Telescope find_files\ficon_hl\14@variable\ticon\t \1\0\4\ngroup\14@property\tdesc\16󰊳 Update\bkey\6u\vaction\15PackerSync\16week_header\1\0\2\16week_header\0\rshortcut\0\1\0\1\venable\2\1\0\2\ntheme\nhyper\vconfig\0\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\2\0\0\6\0\v\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\3=\3\n\2B\0\2\1K\0\1\0\vconfig\rshortcut\1\0\6\vaction\25Telescope find_files\ngroup\nLabel\ficon_hl\14@variable\tdesc\nFiles\ticon\t \bkey\6f\1\0\4\vaction\15PackerSync\tdesc\16󰊳 Update\bkey\6u\ngroup\14@property\16week_header\1\0\2\rshortcut\0\16week_header\0\1\0\1\venable\2\1\0\2\vconfig\0\ntheme\nhyper\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -277,6 +277,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/towh/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["solarized-osaka.nvim"] = {
+    loaded = true,
+    path = "/home/towh/.local/share/nvim/site/pack/packer/start/solarized-osaka.nvim",
+    url = "https://github.com/craftzdog/solarized-osaka.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
