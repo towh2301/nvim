@@ -14,3 +14,8 @@ choco install make
 ```
 make
 ```
+
+### For python
+
+- Install python3 and pip3
+- Install venv
