@@ -3,13 +3,13 @@ return {
 		"akinsho/toggleterm.nvim",
 		cmd = "ToggleTerm",
 		build = ":ToggleTerm",
-		keys = { { "<c-t>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
+		keys = { { "<c-\\>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" } },
 		opts = {
 			size = 16,
-			open_mapping = [[<c-t>]],
+			open_mapping = [[<c-\>]],
 			hide_number = true,
 			shade_filetypes = {},
-			shahe_terminals = true,
+			shade_terminals = true,
 			shading_factor = 2,
 			start_in_insert = true,
 			insert_mappings = true,
@@ -26,5 +26,8 @@ return {
 				},
 			},
 		},
+		config = true,
 	},
+
+	-- Kill terminal buffer: <c-d>
 }

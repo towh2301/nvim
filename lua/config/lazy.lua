@@ -28,6 +28,7 @@ require("lazy").setup({
 				},
 			},
 		},
+
 		-- import/override with your plugins
 		{ import = "plugins" },
 
@@ -74,3 +75,21 @@ require("lazy").setup({
 		},
 	},
 })
+
+-- add the terminal configuration
+function _G.set_terminal_keymaps()
+	-- for conciseness
+	local opt = { noremap = true }
+	local api = vim.api
+
+	-- setup keymap
+	api.nvim_buf_set_keymap(0, "t", "<esc>", [[ <C-\><C-n> ]], opt)
+	api.nvim_buf_set_keymap(0, "t", "jk", [[ <C-\><C-n> ]], opt)
+	api.nvim_buf_set_keymap(0, "t", "<C-h>", [[ <C-\><C-n><C-W>h ]], opt)
+	api.nvim_buf_set_keymap(0, "t", "<C-j>", [[ <C-\><C-n><C-W>j ]], opt)
+	api.nvim_buf_set_keymap(0, "t", "<C-k>", [[ <C-\><C-n><C-W>k ]], opt)
+	api.nvim_buf_set_keymap(0, "t", "<C-h>", [[ <C-\><C-n><C-W>h ]], opt)
+	api.nvim_buf_set_keymap(0, "t", "<C-l>", [[ <C-\><C-n><C-W>l ]], opt)
+end
+
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
