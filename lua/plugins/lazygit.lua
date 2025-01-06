@@ -16,4 +16,7 @@ return {
 	keys = {
 		{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
 	},
+
+	-- disable lazyvim <esc> when in lazygit
+	disable_lazy = true,
 }
