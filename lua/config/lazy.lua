@@ -32,6 +32,8 @@ require("lazy").setup({
 		-- import/override with your plugins
 		{ import = "plugins" },
 
+		{ import = "lazyvim.plugins.extras.dap.core" },
+
 		-- import AI plugins
 		{ import = "lazyvim.plugins.extras.ai.copilot" },
 		{ import = "lazyvim.plugins.extras.ai.copilot-chat" },

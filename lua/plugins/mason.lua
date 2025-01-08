@@ -5,15 +5,14 @@ return {
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 
-	-- ensure_installed is a list of packages that mason will install
-	-- opts = { ensure_installed = { "java-debug-adapter", "java-test" } },
-
 	config = function()
 		-- import mason
 		local mason = require("mason")
 
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
+
+		-- import mason-tool-installer
 
 		local mason_tool_installer = require("mason-tool-installer")
 
@@ -38,8 +37,6 @@ return {
 				"lua_ls",
 				"prismals",
 				"pyright",
-				-- "java",
-				-- "java_language_server",
 			},
 			automatic_installation = true,
 		})
