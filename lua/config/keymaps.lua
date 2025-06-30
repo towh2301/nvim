@@ -29,9 +29,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", opts)
 keymap.set("n", "x", '"_x')
 
 -- inline options
-keymap.set("n", "<S-e>", "<S-w>$", opts) -- move cursor to end of line
+keymap.set("n", "<S-e>", "$", opts) -- move cursor to end of line
 keymap.set("n", "<S-f>", "0", opts) -- move cursor to begin of line
-keymap.set("v", "<S-e>", "<S-w>$", opts) -- move cursor to end of line - VISUAL MODE
+keymap.set("v", "<S-e>", "$", opts) -- move cursor to end of line - VISUAL MODE
 keymap.set("v", "<S-f>", "0", opts) -- move cursor to begin of line - VISUAL MODE
 
 -- window management
