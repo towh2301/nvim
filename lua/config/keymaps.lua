@@ -10,16 +10,16 @@ local keymap = vim.keymap
 -- Leader Key Configuration
 -- -----------------------------
 keymap.set("", "<Space>", "<Nop>", opts) -- disable default space key behavior
-vim.g.mapleader = " " -- set <leader> to space
+vim.g.mapleader = " "                    -- set <leader> to space
 -- vim.g.maplocalleader = " "
 
 -- -----------------------------
 -- General Keymaps
 -- -----------------------------
 
-keymap.set("i", "jk", "<ESC>", opts) -- exit insert mode quickly
+keymap.set("i", "jk", "<ESC>", opts)             -- exit insert mode quickly
 keymap.set("n", "<leader>nh", ":nohl<CR>", opts) -- clear search highlights
-keymap.set("n", "x", '"_x', opts) -- delete single char without copying
+keymap.set("n", "x", '"_x', opts)                -- delete single char without copying
 
 -- Move to beginning/end of line
 keymap.set({ "n", "v" }, "<S-e>", "$", opts) -- go to end of line
@@ -28,9 +28,9 @@ keymap.set({ "n", "v" }, "<S-f>", "0", opts) -- go to beginning of line
 -- -----------------------------
 -- Window Management
 -- -----------------------------
-keymap.set("n", "sv", "<C-w>v", opts) -- split vertically
-keymap.set("n", "sh", "<C-w>s", opts) -- split horizontally
-keymap.set("n", "se", "<C-w>=", opts) -- equal size
+keymap.set("n", "sv", "<C-w>v", opts)     -- split vertically
+keymap.set("n", "sh", "<C-w>s", opts)     -- split horizontally
+keymap.set("n", "se", "<C-w>=", opts)     -- equal size
 keymap.set("n", "sc", ":close<CR>", opts) -- close current split
 
 -- -----------------------------
