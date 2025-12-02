@@ -97,7 +97,7 @@ keymap.set("n", "<leader>o", ":Neotree focus<CR>", opts)
 
 -- Open Lazygit inside a floating terminal
 -- (requires 'kdheepak/lazygit.nvim' or similar plugin)
-keymap.set("n", "<leader>gg", ":LazyGit<CR>", opts)
+-- keymap.set("n", "<leader>gg", ":LazyGit<CR>", opts)
 -- Explanation:
 -- <leader>gg  → launch Lazygit in a floating window (if plugin supports it)
 -- This is one of the fastest ways to manage Git inside Neovim.
