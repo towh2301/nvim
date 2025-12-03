@@ -111,4 +111,12 @@ return {
       vim.cmd.colorscheme("nightfly")
     end,
   },
+
+  -- Set colorscheme
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "nightfly",
+    },
+  },
 }
