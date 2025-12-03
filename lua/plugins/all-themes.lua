@@ -1,76 +1,89 @@
 return {
-  -- Load all theme plugins but don't apply them
-  -- This ensures all colorschemes are available for hot-reloading
-  {
-    "ribru17/bamboo.nvim",
-    lazy = true,
-    priority = 1000,
+  -- 1. Bamboo
+  { 
+    "ribru17/bamboo.nvim", 
+    lazy = true, 
+    priority = 1000 
   },
-  {
-    "bjarneo/aether.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
-    "bjarneo/ethereal.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
-    "bjarneo/hackerman.nvim",
-    lazy = true,
-    priority = 1000,
-  },
+
+  -- 2. Aether / Ethereal / Hackerman (Bjarneo's themes)
+  { "bjarneo/aether.nvim", lazy = true, priority = 1000 },
+  { "bjarneo/ethereal.nvim", lazy = true, priority = 1000 },
+  { "bjarneo/hackerman.nvim", lazy = true, priority = 1000 },
+
+  -- 3. Catppuccin (Highly recommended to configure flavor)
   {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy = true,
     priority = 1000,
+    opts = {
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
+      integrations = {
+        mason = true,
+        neotree = true,
+        native_lsp = {
+          enabled = true,
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
+          },
+        },
+      },
+    },
   },
-  {
-    "sainnhe/everforest",
-    lazy = true,
+
+  -- 4. Everforest
+  { 
+    "sainnhe/everforest", 
+    lazy = true, 
     priority = 1000,
+    config = function()
+      -- Optional: Set contrast (hard, medium, soft)
+      vim.g.everforest_background = "medium"
+    end
   },
-  {
-    "kepano/flexoki-neovim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
-    "rebelot/kanagawa.nvim",
-    lazy = true,
-    priority = 1000,
-  },
-  {
-    "tahayvr/matteblack.nvim",
-    lazy = true,
-    priority = 1000,
-  },
+
+  -- 5. Flexoki
+  { "kepano/flexoki-neovim", lazy = true, priority = 1000 },
+
+  -- 6. Gruvbox
+  { "ellisonleao/gruvbox.nvim", lazy = true, priority = 1000 },
+
+  -- 7. Kanagawa
+  { "rebelot/kanagawa.nvim", lazy = true, priority = 1000 },
+
+  -- 8. Matte Black
+  { "tahayvr/matteblack.nvim", lazy = true, priority = 1000 },
+
+  -- 9. Monokai Pro (Needs setup call)
   {
     "loctvl842/monokai-pro.nvim",
     lazy = true,
     priority = 1000,
+    opts = {
+      filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+    },
   },
-  {
-    "shaunsingh/nord.nvim",
-    lazy = true,
-    priority = 1000,
+
+  -- 10. Nord
+  { "shaunsingh/nord.nvim", lazy = true, priority = 1000 },
+
+  -- 11. Rose Pine
+  { 
+    "rose-pine/neovim", 
+    name = "rose-pine", 
+    lazy = true, 
+    priority = 1000 
   },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    lazy = true,
+
+  -- 12. Tokyo Night (Default LazyVim theme, added here for completeness)
+  { 
+    "folke/tokyonight.nvim", 
+    lazy = true, 
     priority = 1000,
-  },
-  {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
+    opts = { style = "storm" } 
   },
 }

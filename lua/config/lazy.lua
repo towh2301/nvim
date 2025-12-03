@@ -20,32 +20,51 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      opts = {
-        colorscheme = "nightfox",
-        news = {
-          lazyvim = true,
-          neovim = true,
-        },
-      },
+     
     },
 
-    { import = "lazyvim.plugins.extras.dap.core" },
-
-    -- import AI plugins
-    { import = "lazyvim.plugins.extras.ai.copilot" },
-    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-
-    -- import language plugins
-    { import = "lazyvim.plugins.extras.lang.tailwind" },
+    -- ============================
+    -- 1. LANGUAGES (The Tech Stack)
+    -- ============================
+    
+    -- JavaScript / TypeScript / React / Next.js
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
-
-    -- import prettier plugins
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
 
-    -- import/override with your plugins
-    { import = "plugins" },
+    -- Python / Django
+    { import = "lazyvim.plugins.extras.lang.python" },
+
+    -- Java / Spring Boot
+    { import = "lazyvim.plugins.extras.lang.java" },
+
+    -- C / C++
+    { import = "lazyvim.plugins.extras.lang.clangd" },
+    { import = "lazyvim.plugins.extras.lang.cmake" },
+
+    -- HTML / CSS / Tailwind
+    { import = "lazyvim.plugins.extras.lang.tailwind" },
+    
+    -- Database / SQL
+    { import = "lazyvim.plugins.extras.lang.sql" },
+
+    -- Docker / YAML
+    { import = "lazyvim.plugins.extras.lang.docker" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
+
+    -- ============================
+    -- 2. EDITOR TOOLS
+    -- ============================
+    -- Debugging Adapter Protocol (Breakpoints, stepping)
+    { import = "lazyvim.plugins.extras.dap.core" },
+    { import = "lazyvim.plugins.extras.dap.nlua" },
+    
+    -- AI (Optional - Uncomment if you have Copilot)
+    -- { import = "lazyvim.plugins.extras.coding.copilot" },
+
+    -- Import your custom plugins folder
+    { import = "plugins" },  
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
