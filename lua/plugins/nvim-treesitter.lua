@@ -9,7 +9,7 @@ return {
         -- Base
         "bash",
         "vim",
-        "lua",
+        -- "lua",
         "luadoc",
         "regex",
         "markdown",

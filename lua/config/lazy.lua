@@ -20,13 +20,19 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-     
+      opts = {
+        lsp = {
+          servers = {
+            lua_ls = false,
+          },
+        },
+      },
     },
 
     -- ============================
     -- 1. LANGUAGES (The Tech Stack)
     -- ============================
-    
+
     -- JavaScript / TypeScript / React / Next.js
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
@@ -45,7 +51,7 @@ require("lazy").setup({
 
     -- HTML / CSS / Tailwind
     { import = "lazyvim.plugins.extras.lang.tailwind" },
-    
+
     -- Database / SQL
     { import = "lazyvim.plugins.extras.lang.sql" },
 
@@ -59,12 +65,12 @@ require("lazy").setup({
     -- Debugging Adapter Protocol (Breakpoints, stepping)
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
-    
+
     -- AI (Optional - Uncomment if you have Copilot)
     -- { import = "lazyvim.plugins.extras.coding.copilot" },
 
     -- Import your custom plugins folder
-    { import = "plugins" },  
+    { import = "plugins" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

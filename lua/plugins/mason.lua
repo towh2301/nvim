@@ -1,3 +1,4 @@
+-- lua/plugins/mason.lua
 return {
   "mason-org/mason.nvim",
   dependencies = {
@@ -6,17 +7,10 @@ return {
   },
 
   config = function()
-    -- import mason
     local mason = require("mason")
-
-    -- import mason-lspconfig
     local mason_lspconfig = require("mason-lspconfig")
-
-    -- import mason-tool-installer
-
     local mason_tool_installer = require("mason-tool-installer")
 
-    -- enable mason and configure icons
     mason.setup({
       ui = {
         icons = {
@@ -28,26 +22,50 @@ return {
     })
 
     mason_lspconfig.setup({
-      -- list of servers for mason to install
+      -- Full-stack + C/C++ + Java + Python (no lua_ls!)
       ensure_installed = {
-        "ts_ls",
+        -- Full-stack Web
+        "ts_ls", -- TypeScript/JavaScript
         "html",
         "cssls",
         "tailwindcss",
-        "lua_ls",
-        "prismals",
-        "pyright",
+        "prismals", -- Prisma
+
+        -- Python
+        "pyright", -- Fast Python LSP
+
+        -- C / C++
+        "clangd", -- Best C/C++ LSP
+
+        -- Java
+        "jdtls", -- Eclipse JDT Language Server (Java)
+
+        -- Optional nice-to-have
+        "jsonls",
+        "marksman", -- Markdown
+        "bashls",
       },
-      automatic_installation = true,
+
+      -- Keep automatic installation ON for everything EXCEPT lua_ls
+      automatic_installation = { exclude = { "lua_ls" } },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "black", -- python formatter
-        "pylint",
+        -- Formatters
+        "prettier", -- JS/TS/HTML/CSS/JSON
+        "stylua", -- Lua
+        "black", -- Python
+        "clang-format", -- C/C++
+        "google-java-format", -- Java
+
+        -- Linters
+        "eslint_d", -- JS/TS
+        "pylint", -- Python (optional if using ruff)
+        "cpplint", -- C/C++ style checker
       },
+      auto_update = false,
+      run_on_start = true,
     })
   end,
 }
