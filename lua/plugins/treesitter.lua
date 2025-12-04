@@ -39,35 +39,35 @@ return {
         "toml",
       },
 
+      config = function(_, opts)
+        local TS = require("nvim-treesitter")
+        TS.setup(opts)
 
-    config = function(_, opts)
-      local TS = require("nvim-treesitter")
-      TS.setup(opts)
-
-      -- MDX
-      vim.filetype.add({
-        extension = {
-          mdx = "mdx",
-        },
-      })
-      vim.treesitter.language.register("markdown", "mdx")
-    end,
-  },
-
-  {
-    "windwp/nvim-ts-autotag",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-    ft = {
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "html",
-      "vue",
+        -- MDX
+        vim.filetype.add({
+          extension = {
+            mdx = "mdx",
+          },
+        })
+        vim.treesitter.language.register("markdown", "mdx")
+      end,
     },
 
-    opts = {
-      enable = true
+    {
+      "windwp/nvim-ts-autotag",
+      dependencies = { "nvim-treesitter/nvim-treesitter" },
+      ft = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+      },
+
+      opts = {
+        enable = true,
+      },
     },
   },
 }
