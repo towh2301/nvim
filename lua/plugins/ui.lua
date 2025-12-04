@@ -68,24 +68,56 @@ return {
     keys = {},
   },
 
-  -- -- buffer line
-  -- {
-  -- 	"akinsho/bufferline.nvim",
-  -- 	event = "VeryLazy",
-  -- 	keys = {
-  -- 		{ "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
-  -- 		{ "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
-  -- 	},
-  -- 	opts = {
-  -- 		options = {
-  -- 			mode = "tabs",
-  -- 			-- separator_style = "slant",
-  -- 			show_buffer_close_icons = false,
-  -- 			show_close_icon = false,
-  -- 		},
-  -- 	},
-  -- },
-  --
+  {
+    "akinsho/bufferline.nvim",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        -- mode = "tabs",
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+        separator_style = "thin",
+      },
+      highlights = {
+        fill = {
+          bg = "#1d3b53", -- nightflyBackground
+        },
+        background = {
+          fg = "#c3ccdc",
+          bg = "#092236", -- nightflyTabInactive
+        },
+
+        tab = {
+          fg = "#c3ccdc",
+          bg = "#092236",
+        },
+        tab_selected = {
+          fg = "#1d3b53",
+          bg = "#82aaff", -- nightflyTabActive
+          bold = true,
+        },
+
+        tab_separator = {
+          fg = "#20394f",
+          bg = "#092236",
+        },
+        tab_separator_selected = {
+          fg = "#82aaff",
+          bg = "#1d3b53",
+        },
+
+        buffer_visible = {
+          fg = "#c3ccdc",
+          bg = "#092236",
+        },
+        buffer_selected = {
+          fg = "#1d3b53",
+          bg = "#82aaff",
+          bold = true,
+        },
+      },
+    },
+  },
 
   -- filename
   {

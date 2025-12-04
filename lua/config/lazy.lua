@@ -68,6 +68,9 @@ require("lazy").setup({
 
     -- AI (Optional - Uncomment if you have Copilot)
     -- { import = "lazyvim.plugins.extras.coding.copilot" },
+    --
+
+    -- { import = "towh" },
 
     -- Import your custom plugins folder
     { import = "plugins" },
