@@ -1,4 +1,3 @@
--- File: ~/.config/nvim/lua/plugins/blink-cmp.lua
 return {
   "saghen/blink.cmp",
   lazy = false, -- bật ngay khi khởi động (LazyVim sẽ tự load ở InsertEnter)
