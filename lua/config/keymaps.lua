@@ -84,6 +84,11 @@ keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Plugin Integrations
 -- -----------------------------
 
+-- Obsidian keymaps
+vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "New Obsidian Note" })
+vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Search Obsidian Notes" })
+vim.keymap.set("n", "<leader>od", "<cmd>ObsidianToday<cr>", { desc = "Obsidian Daily Note" })
+
 -- Maximizer (toggle split maximization)
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts)
 
