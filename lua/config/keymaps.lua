@@ -11,7 +11,6 @@ local keymap = vim.keymap
 -- -----------------------------
 keymap.set("", "<Space>", "<Nop>", opts) -- disable default space key behavior
 vim.g.mapleader = " " -- set <leader> to space
--- vim.g.maplocalleader = " "
 
 -- -----------------------------
 -- General Keymaps
