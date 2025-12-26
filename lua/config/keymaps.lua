@@ -95,6 +95,9 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts)
 keymap.set("n", "<leader>e", ":Neotree toggle<CR>", opts)
 keymap.set("n", "<leader>o", ":Neotree focus<CR>", opts)
 
+-- Markdown preview
+keymap.set("n", "<leader>md", ":MarkdownPreview<cr>")
+
 -- -----------------------------
 -- 🧩 Lazygit Integration
 -- -----------------------------

@@ -11,7 +11,9 @@ return {
     "nvim-mini/mini.bracketed",
     event = "BufReadPost",
     config = function()
+      ---@diagnostic disable-next-line: inject-field
       local bracketed = require("mini.bracketed")
+
       bracketed.setup({
         file = { suffix = "" },
         window = { suffix = "" },

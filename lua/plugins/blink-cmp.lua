@@ -96,5 +96,9 @@ return {
     end
 
     require("blink.cmp").setup(opts)
+
+    require("render-markdown").setup({
+      completions = { lsp = { enabled = true } },
+    })
   end,
 }
