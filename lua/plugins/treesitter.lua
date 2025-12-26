@@ -34,6 +34,9 @@ return {
         "sql",
         "dockerfile",
 
+        -- Rust
+        "rust-analyzer",
+
         -- Config Files
         "yaml",
         "toml",
