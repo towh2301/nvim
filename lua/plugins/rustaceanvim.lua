@@ -14,14 +14,6 @@ return {
           code_action_group = true,
         },
         server = {
-          on_attach = function(client, bufnr)
-            -- Enable inlay hints
-            if vim.fn.has("nvim-0.10") == 1 then
-              if client.supports_method("textDocument/inlayHint") then
-                vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-              end
-            end
-          end,
           default_settings = {
             ["rust-analyzer"] = {
               diagnostics = {
@@ -34,18 +26,12 @@ return {
                 enable = true,
                 showParameterNames = true,
                 parameterHintsPrefix = "→ ",
-                chainingHints = true,
+                chainingHints = { enable = true },
                 chainingHintsSeparator = " → ",
-                typeHints = true,
+                typeHints = { enable = false },
                 typeHintsSeparator = " = ",
-                typeHintsWithDuplicates = true,
-                lifetimeElisionHints = {
-                  enable = true,
-                  useParameterNames = true,
-                },
-                closureReturnTypeHints = {
-                  enable = true,
-                },
+                lifetimeElisionHints = { enable = true, useParameterNames = true },
+                closureReturnTypeHints = { enable = "always" },
               },
               imports = {
                 granularity = {
