@@ -25,7 +25,7 @@ return {
           default_settings = {
             ["rust-analyzer"] = {
               diagnostics = {
-                disable = {"unlinked-file"},
+                disable = { "unlinked-file" },
               },
               checkOnSave = {
                 command = "clippy",
