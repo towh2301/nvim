@@ -35,7 +35,7 @@ return {
         "dockerfile",
 
         -- Rust
-        "rust-analyzer",
+        "rust",
 
         -- Config Files
         "yaml",

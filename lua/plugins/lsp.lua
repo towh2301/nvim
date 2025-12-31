@@ -12,6 +12,9 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        -- Rust tools
+        "rust-analyzer",
+        "rustfmt",
       })
     end,
   },

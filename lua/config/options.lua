@@ -73,6 +73,17 @@ opt.shortmess:append("c")
 -- for theme
 vim.g.nightflyTransparent = true
 
+-- Rust-specific settings
+-- Use 4 spaces for Rust (standard in Rust community)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "rust",
+  callback = function()
+    vim.opt_local.tabstop = 4
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.softtabstop = 4
+  end,
+})
+
 -- under curl options
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
