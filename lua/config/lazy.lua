@@ -43,7 +43,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.python" },
 
     -- Java / Spring Boot
-    { import = "lazyvim.plugins.extras.lang.java" },
+    -- { import = "lazyvim.plugins.extras.lang.java" },
 
     -- C / C++
     { import = "lazyvim.plugins.extras.lang.clangd" },
