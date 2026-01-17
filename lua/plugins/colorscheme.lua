@@ -18,7 +18,7 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
-      flavour = "mocha", -- latte, frappe, macchiato, mocha
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
       integrations = {
         mason = true,
         neotree = true,
@@ -104,11 +104,8 @@ return {
     opts = {}, -- opts is ignored by this plugin → use config instead
     config = function()
       vim.g.nightflyTransparent = true -- this is the official way
-      -- optional extras you might like:
       vim.g.nightflyNormalFloat = true -- make floats transparent too
       vim.g.nightflyWinSeparator = 2 -- thinner separators (0 = none, 1 = default, 2 = thin)
-
-      vim.cmd.colorscheme("nightfly")
     end,
   },
 
@@ -116,7 +113,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nightfly",
+      colorscheme = "catppuccin",
     },
   },
 }
