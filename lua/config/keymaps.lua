@@ -83,11 +83,6 @@ keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Plugin Integrations
 -- -----------------------------
 
--- Obsidian keymaps
-vim.keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "New Obsidian Note" })
-vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Search Obsidian Notes" })
-vim.keymap.set("n", "<leader>od", "<cmd>ObsidianToday<cr>", { desc = "Obsidian Daily Note" })
-
 -- Maximizer (toggle split maximization)
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts)
 
@@ -96,4 +91,37 @@ keymap.set("n", "<leader>e", ":Neotree toggle<CR>", opts)
 keymap.set("n", "<leader>o", ":Neotree focus<CR>", opts)
 
 -- Markdown preview
-keymap.set("n", "<leader>md", ":MarkdownPreview<cr>")
+keymap.set("n", "<leader>md", ":MarkdownPreview<cr>", opts)
+
+-- -----------------------------
+-- Java Development (nvim-java)
+-- -----------------------------
+
+-- Build / Workspace
+keymap.set("n", "<leader>jb", ":JavaBuildBuildWorkspace<CR>", opts) -- build Java workspace
+keymap.set("n", "<leader>jC", ":JavaBuildCleanWorkspace<CR>", opts) -- clean Java workspace
+
+-- Run / Stop
+keymap.set("n", "<leader>jr", ":JavaRunnerRunMain<CR>", opts) -- run main class
+keymap.set("n", "<leader>js", ":JavaRunnerStopMain<CR>", opts) -- stop running main
+keymap.set("n", "<leader>jl", ":JavaRunnerToggleLogs<CR>", opts) -- toggle runner logs
+keymap.set("n", "<leader>jL", ":JavaRunnerSwitchLogs<CR>", opts) -- switch runner logs view
+
+-- Tests
+keymap.set("n", "<leader>jtc", ":JavaTestRunCurrentClass<CR>", opts) -- run tests in current class
+keymap.set("n", "<leader>jtm", ":JavaTestRunCurrentMethod<CR>", opts) -- run test under cursor
+keymap.set("n", "<leader>jdc", ":JavaTestDebugCurrentClass<CR>", opts) -- debug current test class
+keymap.set("n", "<leader>jdm", ":JavaTestDebugCurrentMethod<CR>", opts) -- debug current test method
+keymap.set("n", "<leader>jtr", ":JavaTestViewLastReport<CR>", opts) -- view last test report
+
+-- Refactoring
+keymap.set("n", "<leader>jec", ":JavaRefactorExtractConstant<CR>", opts) -- extract constant
+keymap.set("n", "<leader>jef", ":JavaRefactorExtractField<CR>", opts) -- extract field
+keymap.set("n", "<leader>jem", ":JavaRefactorExtractMethod<CR>", opts) -- extract method
+keymap.set("n", "<leader>jev", ":JavaRefactorExtractVariable<CR>", opts) -- extract variable
+keymap.set("n", "<leader>jeV", ":JavaRefactorExtractVariableAllOccurrence<CR>", opts) -- extract variable (all)
+
+-- Profiling / Config
+keymap.set("n", "<leader>jp", ":JavaProfile<CR>", opts) -- profile Java application
+keymap.set("n", "<leader>jd", ":JavaDapConfig<CR>", opts) -- open DAP config
+keymap.set("n", "<leader>jS", ":JavaSettingsChangeRuntime<CR>", opts) -- change Java runtime
