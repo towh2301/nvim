@@ -109,11 +109,14 @@ return {
     end,
   },
 
+  -- 15. Nightfox (nightfox, terafox, nordfox, carbonfox, duskfox, dawnfox, dayfox)
+  { "EdenEast/nightfox.nvim" }, -- lazy
+
   -- Set colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "terafox",
     },
   },
 }

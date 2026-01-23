@@ -21,6 +21,9 @@ return {
       -- We still use 'super-tab' as a foundation but we will customize it
       preset = "super-tab",
 
+      -- 0. C-TAB to accept
+      --["<C-Tab>"] = { "accept", "fallback" },
+
       -- 1. ENTER to Accept
       ["<CR>"] = { "accept", "fallback" },
 
