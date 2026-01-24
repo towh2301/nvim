@@ -113,10 +113,10 @@ return {
   { "EdenEast/nightfox.nvim" }, -- lazy
 
   -- Set colorscheme
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "terafox",
-    },
-  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "terafox",
+  --   },
+  -- },
 }

@@ -4,6 +4,7 @@
   "SchemaStore.nvim": { "branch": "main", "commit": "a0fad73139f98ea1d6e9d380374c16245e562f4f" },
   "aether.nvim": { "branch": "main", "commit": "e4c485f6fea6170fe2da17e87ca98cd25d215cd5" },
   "bamboo.nvim": { "branch": "master", "commit": "1309bc88bffcf1bedc3e84e7fa9004de93da774a" },
+  "base16-nvim": { "branch": "master", "commit": "5f140bdbb07c0767f0785c71407330c8c96e9bcf" },
   "blink-copilot": { "branch": "main", "commit": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39" },
   "blink.cmp": { "branch": "main", "commit": "b19413d214068f316c78978b08264ed1c41830ec" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
