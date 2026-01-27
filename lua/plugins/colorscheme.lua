@@ -109,14 +109,25 @@ return {
     end,
   },
 
+  -- 15. One darkpro
+  {
+    "olimorris/onedarkpro.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {
+      dark_theme = "onedark", -- The default dark theme
+      light_theme = "onelight", -- The default light theme
+    },
+  },
+
   -- 15. Nightfox (nightfox, terafox, nordfox, carbonfox, duskfox, dawnfox, dayfox)
   { "EdenEast/nightfox.nvim" }, -- lazy
 
   -- Set colorscheme
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "terafox",
-  --   },
-  -- },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "onedark",
+    },
+  },
 }
