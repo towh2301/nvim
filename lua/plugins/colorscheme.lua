@@ -101,6 +101,7 @@ return {
     name = "nightfly", -- this lets you do colors = "nightfly" later
     lazy = false, -- load immediately (colorscheme)
     priority = 1000, -- highest priority for colorschemes
+
     opts = {}, -- opts is ignored by this plugin → use config instead
     config = function()
       vim.g.nightflyTransparent = true -- this is the official way
@@ -127,7 +128,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "nightfox", -- change to your preferred colorscheme
     },
   },
 }
